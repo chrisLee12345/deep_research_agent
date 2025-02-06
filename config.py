@@ -4,8 +4,8 @@
 AZURE_CONFIG = {
     "api_type": "azure",
     "api_version": "2024-08-01-preview",
-    "api_base": "https://ai-search-gpt4.openai.azure.com",
-    "api_key": "DuyZ0hHrPDcKN5FswiEyi43Reqqu2qLulqfQMglca8xDYA79URG3JQQJ99BAACYeBjFXJ3w3AAABACOGvlW6",
+    "api_base": os.getenv('AZURE_OPENAI_ENDPOINT', 'https://ai-search-gpt4.openai.azure.com'),
+    "api_key": os.getenv('AZURE_OPENAI_API_KEY'),
     "deployment_name": "gpt-4o"
 }
 
@@ -13,8 +13,6 @@ AZURE_CONFIG = {
 os.environ["OPENAI_API_TYPE"] = AZURE_CONFIG["api_type"]
 os.environ["OPENAI_API_VERSION"] = AZURE_CONFIG["api_version"]
 os.environ["OPENAI_API_BASE"] = AZURE_CONFIG["api_base"]
-AZURE_OPENAI_API_KEY = os.getenv('AZURE_OPENAI_API_KEY')
-AZURE_OPENAI_ENDPOINT = os.getenv('AZURE_OPENAI_ENDPOINT')
 os.environ["OPENAI_API_KEY"] = AZURE_CONFIG["api_key"]
 os.environ["OPENAI_DEPLOYMENT_NAME"] = AZURE_CONFIG["deployment_name"]
 
