@@ -13,6 +13,8 @@ AZURE_CONFIG = {
 os.environ["OPENAI_API_TYPE"] = AZURE_CONFIG["api_type"]
 os.environ["OPENAI_API_VERSION"] = AZURE_CONFIG["api_version"]
 os.environ["OPENAI_API_BASE"] = AZURE_CONFIG["api_base"]
+AZURE_OPENAI_API_KEY = os.getenv('AZURE_OPENAI_API_KEY')
+AZURE_OPENAI_ENDPOINT = os.getenv('AZURE_OPENAI_ENDPOINT')
 os.environ["OPENAI_API_KEY"] = AZURE_CONFIG["api_key"]
 os.environ["OPENAI_DEPLOYMENT_NAME"] = AZURE_CONFIG["deployment_name"]
 
