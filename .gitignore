@@ -20,11 +20,9 @@ wheels/
 .installed.cfg
 *.egg
 
-# Virtual Environment
-venv/
-ENV/
-env/
-venv
+# Environment variables
+.env
+.env.*
 
 # IDE
 .idea/
@@ -32,22 +30,9 @@ venv
 *.swp
 *.swo
 
-# macOS
-.DS_Store
-
-# Project specific
+# Logs
 *.log
-.env
-*.png
-!examples/nvda_trend.png
-*.jpg
-*.jpeg
-*.gif
-*.pdf
-scratch*.txt
-analysis_*.py
-report_*.md
 
-# Jupyter Notebook
-.ipynb_checkpoints
-*.ipynb 
+# Local development
+.DS_Store
+.env

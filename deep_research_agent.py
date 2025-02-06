@@ -164,9 +164,9 @@ def chat_loop(model: str, query: str, system_prompt: str) -> None:
     """
     # 初始化 Azure OpenAI 客户端
     client = openai.AzureOpenAI(
-        api_key="DuyZ0hHrPDcKN5FswiEyi43Reqqu2qLulqfQMglca8xDYA79URG3JQQJ99BAACYeBjFXJ3w3AAABACOGvlW6",
+        api_key=os.getenv('AZURE_OPENAI_API_KEY'),  # 从环境变量获取
         api_version="2024-08-01-preview",
-        azure_endpoint="https://ai-search-gpt4.openai.azure.com"
+        azure_endpoint=os.getenv('AZURE_OPENAI_ENDPOINT')  # 从环境变量获取
     )
     
     # Start a conversation
