@@ -12,6 +12,7 @@ import subprocess
 from typing import Optional, List
 from dataclasses import dataclass
 import time
+from dotenv import load_dotenv
 
 import openai
 
@@ -25,6 +26,9 @@ logging.basicConfig(
     stream=sys.stderr
 )
 logger = logging.getLogger(__name__)
+
+# Load environment variables from .env file
+load_dotenv()
 
 @dataclass
 class TokenUsage:
